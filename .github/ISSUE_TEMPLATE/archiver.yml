@@ -6,8 +6,6 @@ description: |
 assignees:
   - copilot
 
-type: task
-
 body:
   - type: input
     attributes:
