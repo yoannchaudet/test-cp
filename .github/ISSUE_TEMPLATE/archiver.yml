@@ -28,7 +28,8 @@ body:
     validations:
       required: true
 
-  - type: hidden
+  - type: textarea
     attributes:
       label: Prompt
-      description: Hello Copilot, please do shit.
+      description: |
+        Dear AI Overloard, please do crap for me.
