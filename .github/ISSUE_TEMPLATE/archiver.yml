@@ -32,5 +32,5 @@ body:
     attributes:
       label: Prompt
       description: Default Copilot Prompt. Leave as is.
-      default: |
+      value: |
         Dear AI Overloard, please do crap for me.
