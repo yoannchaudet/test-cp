@@ -4,7 +4,7 @@ description: |
   Archive a recorded meeting in the Edge Foundation team repository.
 
 assignees:
-  - @Copilot
+  - "@Copilot"
 
 body:
   - type: input
