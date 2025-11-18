@@ -1,0 +1,36 @@
+name: Archive Recorded Meeting
+
+description: |
+  Archive a recorded meeting in the Edge Foundation team repository.
+
+assignees:
+  - copilot
+
+type: task
+
+body:
+  - type: input
+    attributes:
+      label: Meeting
+      description: The name of the meeting or subject covered.
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Date
+      description: In ISO format (YYYY-MM-DD) please.
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: URL
+      description: The URL of the recorded meeting.
+    validations:
+      required: true
+
+  - type: hidden
+    attributes:
+      label: Prompt
+      description: Hello Copilot, please do shit.
