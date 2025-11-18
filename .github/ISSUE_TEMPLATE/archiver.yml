@@ -31,5 +31,6 @@ body:
   - type: textarea
     attributes:
       label: Prompt
-      description: |
+      description: Default Copilot Prompt. Leave as is.
+      default: |
         Dear AI Overloard, please do crap for me.
