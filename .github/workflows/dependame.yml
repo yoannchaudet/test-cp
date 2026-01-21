@@ -1,0 +1,48 @@
+name: Dependame
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */2 * * *'
+
+jobs:
+  enable-auto-merge:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Enable Auto-Merge
+        uses: yoannchaudet/dependame@v0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          command: EnableAutoMerge
+          auto_merge_branches: enterprise-*-release
+          auto_merge_method: squash
+
+  update-branch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Update Branch
+        uses: yoannchaudet/dependame@v0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          command: UpdateBranch
+          update_branch_label: ready-for-review
+
+  bump-pr:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Bump PR
+        uses: yoannchaudet/dependame@v0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          command: BumpPR
